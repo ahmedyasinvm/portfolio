@@ -231,6 +231,7 @@ section {
   padding: 0 24px;
   padding-top: 80px;
   pointer-events: none;
+  position: relative;
 }
 
 .hero-eyebrow {
@@ -341,7 +342,7 @@ section {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 40px;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -354,6 +355,7 @@ section {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   pointer-events: none;
+  z-index: 2;
 }
 
 .scroll-line {
