@@ -48,8 +48,8 @@ export default function Contact() {
               Open to full-stack opportunities, freelance projects, and collaborations.
               Drop me a line — I usually respond within 24 hours.
             </p>
-            <a href="mailto:ahmedyasinv.m@gmail.com" className="contact-link">
-              ✉ ahmedyasinv.m@gmail.com
+            <a href="mailto:ahmedyasin.git@gmail.com" className="contact-link">
+              ✉ ahmedyasin.git@gmail.com
             </a>
           </motion.div>
 

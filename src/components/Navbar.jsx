@@ -29,7 +29,7 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <a href="mailto:ahmedyasinv.m@gmail.com" className="navbar-cta">
+      <a href="mailto:ahmedyasin.git@gmail.com" className="navbar-cta">
         Hire Me ↗
       </a>
     </motion.nav>
