@@ -12,12 +12,6 @@ Personal portfolio website built with Vite + React + WebGL.
 - **Lenis** — smooth scrolling
 - **GSAP** — animation orchestration
 
-## Local Development
-
-```bash
-npm install
-npm run dev
-```
 
 ## Deployment
 
