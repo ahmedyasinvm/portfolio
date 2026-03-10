@@ -80,17 +80,16 @@ export default function About() {
           {/* Bio card */}
           <motion.div className="about-bio-card" variants={fadeUp}>
             <p>
-              Results-driven Full-Stack Developer specializing in{' '}
-              <strong style={{ color: 'var(--text-primary)' }}>Python and Django</strong>{' '}
-              with a proven ability to engineer scalable, responsive web solutions. My expertise
-              encompasses designing intuitive interfaces, managing complex relational databases,
-              and implementing secure RESTful APIs.
+              I got into coding in 2022 when I tried — and failed — to build my own game.
+              That failure hooked me. I rebuilt it, then rebuilt it again, and somewhere along the way
+              I discovered that what I actually love is engineering
+              <strong style={{ color: 'var(--text-primary)' }}> systems that solve real problems</strong> — not just writing code.
             </p>
             <p>
-              Proficient in{' '}
-              <strong style={{ color: 'var(--text-primary)' }}>React, MySQL, and Bootstrap</strong>,
-              with a commitment to writing efficient code and delivering practical, high-quality
-              software that solves real problems.
+              Today I specialize in{' '}
+              <strong style={{ color: 'var(--text-primary)' }}>Python & Django</strong> for backend architecture,
+              paired with <strong style={{ color: 'var(--text-primary)' }}>React</strong> on the frontend.
+              I care about clean APIs, readable code, and shipping things that actually work.
             </p>
 
             <div className="divider" />

@@ -3,9 +3,9 @@ import { motion, useInView, useMotionValue, animate } from 'framer-motion';
 
 const stats = [
   { value: 3, suffix: '+', label: 'Years of Coding' },
-  { value: 2, suffix: '+', label: 'Projects Shipped' },
-  { value: 12, suffix: '', label: 'Core Technologies' },
-  { value: 100, suffix: '%', label: 'Commitment' },
+  { value: 2, suffix: '', label: 'Full-Stack Platforms' },
+  { value: 12, suffix: '+', label: 'Technologies Used' },
+  { value: 15, suffix: '+', label: 'REST APIs Built' },
 ];
 
 function Counter({ value, suffix }) {

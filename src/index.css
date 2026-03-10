@@ -18,8 +18,8 @@
   --accent-dim: rgba(0, 234, 255, 0.6);
   --accent-glow: rgba(0, 234, 255, 0.12);
   --text-primary: #f0f6ff;
-  --text-secondary: #8899aa;
-  --text-muted: #445566;
+  --text-secondary: #a8b8cc;
+  --text-muted: #5a6e84;
   --font: "Plus Jakarta Sans", system-ui, sans-serif;
   --radius-sm: 10px;
   --radius-md: 20px;
@@ -194,22 +194,29 @@ body {
   }
   .navbar-links {
     display: none;
-    position: absolute;
-    top: 76px;
-    left: 24px;
-    right: 24px;
-    background: rgba(13, 13, 26, 0.95);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(5, 5, 15, 0.98);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: none;
+    border-radius: 0;
+    padding: 100px 40px 40px;
     flex-direction: column;
-    gap: 20px;
-    box-shadow: var(--shadow-card);
+    gap: 24px;
+    z-index: 99;
+    align-items: center;
+    justify-content: center;
   }
   .navbar-links.mobile-menu-open {
     display: flex;
+  }
+  .navbar-links a {
+    font-size: 1.4rem;
+    font-weight: 700;
   }
   .hamburger {
     display: block;
@@ -243,11 +250,17 @@ section {
 }
 
 .section-title {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-size: clamp(1.7rem, 4vw, 3.5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  line-height: 1.1;
+  line-height: 1.15;
   color: var(--text-primary);
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: clamp(1.4rem, 6.5vw, 2rem);
+  }
 }
 
 /* ============================================
@@ -304,13 +317,20 @@ section {
 }
 
 .hero-title {
-  font-size: clamp(3rem, 9vw, 7.5rem);
+  font-size: clamp(2rem, 8vw, 7.5rem);
   font-weight: 800;
   letter-spacing: -0.04em;
-  line-height: 0.95;
+  line-height: 1;
   color: var(--text-primary);
   margin-bottom: 28px;
   max-width: 900px;
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(1.9rem, 10vw, 3.5rem);
+    line-height: 1.05;
+  }
 }
 
 .hero-title .name-highlight {
@@ -345,13 +365,15 @@ section {
   padding: 14px 34px;
   border-radius: 100px;
   text-decoration: none;
-  transition: all 0.25s;
-  box-shadow: 0 0 0 0 rgba(0, 234, 255, 0.4);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0, 234, 255, 0.2);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 234, 255, 0.45);
+  box-shadow: 0 6px 20px rgba(0, 234, 255, 0.3);
 }
 
 .btn-ghost {

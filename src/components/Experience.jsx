@@ -3,13 +3,13 @@ import { motion, useInView } from 'framer-motion';
 
 const experiences = [
   {
-    company: 'Independent / Freelance',
+    company: 'Independent / Open Source',
     role: 'Full-Stack Developer',
     period: 'Jan 2026 – Present',
     bullets: [
-      'Currently open to full-time opportunities.',
-      'Developing personal projects and freelance web applications using Django and React.',
-      'Exploring advanced backend architectures and modern frontend design patterns.',
+      'Architected and shipped this portfolio — a WebGL + React application rendering a realtime PBR city scene with a cinematic camera flight path synchronized to page scroll.',
+      'Deployed via GitHub Actions with automatic Cloudflare cache invalidation on every push.',
+      'Actively applying for full-time Django / React full-stack roles.',
     ],
   },
   {
