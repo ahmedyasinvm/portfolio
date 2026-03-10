@@ -2,9 +2,9 @@ import { useRef, useEffect } from 'react';
 import { motion, useInView, useMotionValue, animate } from 'framer-motion';
 
 const stats = [
-  { value: 2, suffix: '+', label: 'Years of Coding' },
-  { value: 10, suffix: '+', label: 'Projects Shipped' },
-  { value: 5, suffix: '', label: 'Core Technologies' },
+  { value: 3, suffix: '+', label: 'Years of Coding' },
+  { value: 2, suffix: '+', label: 'Projects Shipped' },
+  { value: 12, suffix: '', label: 'Core Technologies' },
   { value: 100, suffix: '%', label: 'Commitment' },
 ];
 
@@ -15,7 +15,7 @@ function Counter({ value, suffix }) {
 
   useEffect(() => {
     if (!inView) return;
-    const controls = animate(motionValue, value, {
+    const controls = animate(0, value, {
       duration: 2,
       ease: 'easeOut',
       onUpdate(v) {
@@ -23,7 +23,7 @@ function Counter({ value, suffix }) {
       },
     });
     return controls.stop;
-  }, [inView, value, suffix, motionValue]);
+  }, [inView, value, suffix]);
 
   return <span ref={ref}>0{suffix}</span>;
 }

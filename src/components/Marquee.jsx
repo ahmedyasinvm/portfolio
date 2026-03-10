@@ -15,9 +15,13 @@ export default function Marquee() {
   return (
     <div className="marquee-wrapper">
       <div className="marquee-track">
-        {/* Duplicate for seamless loop */}
+        {/* Duplicate for seamless loop - aria-hidden to prevent screen reader duplication */}
         {[...items, ...items].map((item, i) => (
-          <span key={i} className="marquee-item">
+          <span 
+            key={i} 
+            className="marquee-item"
+            aria-hidden={i >= items.length ? "true" : undefined}
+          >
             {item}
             <span className="marquee-dot">✦</span>
           </span>

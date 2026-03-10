@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -21,17 +22,31 @@ export default function Navbar() {
         Ahmed<span>.</span>
       </a>
 
-      <ul className="navbar-links">
+      <ul className={`navbar-links ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
         {['About', 'Skills', 'Experience', 'Projects', 'Contact'].map((item) => (
           <li key={item}>
-            <a href={`#${item.toLowerCase()}`}>{item}</a>
+            <a 
+               href={`#${item.toLowerCase()}`}
+               onClick={() => setMobileMenuOpen(false)}
+            >
+              {item}
+            </a>
           </li>
         ))}
       </ul>
 
-      <a href="mailto:ahmedyasin.git@gmail.com" className="navbar-cta">
-        Hire Me ↗
-      </a>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+        <a href="mailto:ahmedyasin.git@gmail.com" className="navbar-cta">
+          Hire Me ↗
+        </a>
+        <button 
+          className="hamburger" 
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {mobileMenuOpen ? '✕' : '☰'}
+        </button>
+      </div>
     </motion.nav>
   );
 }

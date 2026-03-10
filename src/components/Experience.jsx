@@ -3,6 +3,16 @@ import { motion, useInView } from 'framer-motion';
 
 const experiences = [
   {
+    company: 'Independent / Freelance',
+    role: 'Full-Stack Developer',
+    period: 'Jan 2026 – Present',
+    bullets: [
+      'Currently open to full-time opportunities.',
+      'Developing personal projects and freelance web applications using Django and React.',
+      'Exploring advanced backend architectures and modern frontend design patterns.',
+    ],
+  },
+  {
     company: 'Luminar Technolab',
     role: 'Python Django Full-Stack Developer Trainee',
     period: 'Jun 2025 – Dec 2025',
@@ -37,7 +47,6 @@ export default function Experience() {
           initial="hidden"
           animate={inView ? 'show' : 'hidden'}
         >
-          <p className="eyebrow" style={{ marginBottom: '12px' }}>03 — Experience</p>
           <h2 className="section-title">Professional Log</h2>
         </motion.div>
 

@@ -39,7 +39,6 @@ export default function Projects() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="eyebrow" style={{ marginBottom: '12px' }}>04 — Projects</p>
           <h2 className="section-title">Mission Files</h2>
         </motion.div>
 

@@ -41,7 +41,6 @@ export default function Skills() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="eyebrow" style={{ marginBottom: '12px' }}>02 — Skills</p>
           <h2 className="section-title">Tech Arsenal</h2>
         </motion.div>
 

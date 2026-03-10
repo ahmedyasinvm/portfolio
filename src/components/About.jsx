@@ -29,7 +29,6 @@ export default function About() {
           animate={inView ? 'show' : 'hidden'}
           ref={ref}
         >
-          <p className="eyebrow" style={{ marginBottom: '12px' }}>01 — About</p>
           <h2 className="section-title">The Human Behind the Code</h2>
         </motion.div>
 
@@ -45,7 +44,8 @@ export default function About() {
               <div className="avatar-img">
                 <img
                   src="/pro.png"
-                  alt="Ahmed Yasin"
+                  alt="Ahmed Yasin - Python Django Developer"
+                  loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
                   onError={(e) => {
                     e.target.style.display = 'none';
@@ -104,6 +104,12 @@ export default function About() {
                   <span>Mahatma Gandhi University (MGU), Kottayam &mdash; 2022–2025</span>
                 </div>
               </div>
+            </div>
+
+            <div style={{ marginTop: '2rem' }}>
+              <a href="/resume.pdf" download className="btn-primary">
+                Download Resume
+              </a>
             </div>
           </motion.div>
         </motion.div>

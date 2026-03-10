@@ -178,11 +178,43 @@ body {
   color: var(--accent);
 }
 
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 18px 24px;
   }
   .navbar-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 24px;
+    right: 24px;
+    background: rgba(13, 13, 26, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: var(--shadow-card);
+  }
+  .navbar-links.mobile-menu-open {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  .navbar-cta {
     display: none;
   }
 }

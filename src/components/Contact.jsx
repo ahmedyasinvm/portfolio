@@ -40,7 +40,6 @@ export default function Contact() {
           animate={inView ? 'show' : 'hidden'}
         >
           <motion.div className="contact-left" variants={fadeUp}>
-            <p className="eyebrow" style={{ marginBottom: '12px' }}>05 — Contact</p>
             <h2 className="section-title" style={{ marginBottom: '16px' }}>
               Establish Connection
             </h2>
