@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { useRef, useMemo, useEffect, useState, useLayoutEffect, Suspense } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
-import { useGLTF, OrbitControls, PerspectiveCamera } from '@react-three/drei';
+import { useGLTF, PerspectiveCamera } from '@react-three/drei';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -144,9 +144,6 @@ export default function MatrixCityScene() {
             shadow-camera-far={8000} 
             shadow-bias={-0.0005} 
           />
-          
-          {/* ENABLE ORBIT CONTROLS FOR DEBUGGING */}
-          <OrbitControls />
           
           {/* CRITICAL SUSPENSE BOUNDARY FOR GLTF LOADING */}
           <Suspense fallback={null}>

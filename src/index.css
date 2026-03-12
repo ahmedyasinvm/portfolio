@@ -173,8 +173,8 @@ body {
 }
 
 .navbar-cta:hover {
-  background: rgba(0, 234, 255, 0.2);
-  box-shadow: 0 0 20px rgba(0, 234, 255, 0.3);
+  background: rgba(0, 234, 255, 0.18);
+  box-shadow: 0 0 18px rgba(0, 234, 255, 0.15);
   color: var(--accent);
 }
 
@@ -199,9 +199,10 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(5, 5, 15, 0.98);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    /* Fully opaque — eliminates text bleed-through on mobile */
+    background: rgba(5, 5, 15, 1);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     border: none;
     border-radius: 0;
     padding: 100px 40px 40px;
@@ -259,7 +260,8 @@ section {
 
 @media (max-width: 480px) {
   .section-title {
-    font-size: clamp(1.4rem, 6.5vw, 2rem);
+    /* Tighter clamp — prevents h2 dominating ~375px viewports */
+    font-size: clamp(1.25rem, 5.5vw, 1.75rem);
   }
 }
 
@@ -368,12 +370,13 @@ section {
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
-  box-shadow: 0 2px 12px rgba(0, 234, 255, 0.2);
+  /* Refined — subtle shadow instead of harsh neon ring */
+  box-shadow: 0 2px 12px rgba(0, 234, 255, 0.1);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 234, 255, 0.3);
+  box-shadow: 0 6px 24px rgba(0, 234, 255, 0.2);
 }
 
 .btn-ghost {
@@ -1083,6 +1086,33 @@ section {
   }
   .section-title {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 60px 0;
+  }
+
+  /* Comfortable card padding on small screens */
+  .exp-card {
+    padding: 24px 20px;
+  }
+
+  .project-card {
+    padding: 24px 20px;
+  }
+
+  .bento-card {
+    padding: 24px 20px;
+  }
+
+  .about-bio-card {
+    padding: 28px 22px;
+  }
+
+  .about-avatar-card {
+    padding: 28px 22px;
   }
 }
 
