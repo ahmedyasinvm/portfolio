@@ -48,13 +48,17 @@ export default function Hero({ visible }) {
         </motion.div>
 
         <motion.h1 className="hero-title" variants={itemVariants}>
-          Building the Web with{' '}
-          <span className="name-highlight">Ahmed Yasin</span>
+          Ahmed
+          <br />
+          <span className="name-highlight">Yasin.</span>
         </motion.h1>
 
+        <motion.h2 className="hero-role" variants={itemVariants}>
+          Python & Django Full-Stack Developer
+        </motion.h2>
+
         <motion.p className="hero-sub" variants={itemVariants}>
-          Python &amp; Django Full-Stack Developer — crafting scalable APIs,
-          interactive frontends, and real-world solutions from Kerala, India.
+          Crafting scalable APIs, interactive frontends, and premium digital experiences from Kerala, India.
         </motion.p>
 
         {/* Tech Stack Pills */}

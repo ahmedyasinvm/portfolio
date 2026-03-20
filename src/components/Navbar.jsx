@@ -35,8 +35,8 @@ export default function Navbar() {
   return (
     <motion.nav
       className={`navbar ${scrolled ? 'scrolled' : ''}`}
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      initial={{ y: -80, x: '-50%', opacity: 0 }}
+      animate={{ y: 0, x: '-50%', opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 2.8 }}
     >
       <a href="#home" className="navbar-brand">

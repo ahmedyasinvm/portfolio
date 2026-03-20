@@ -3,16 +3,6 @@ import { motion, useInView } from 'framer-motion';
 
 const experiences = [
   {
-    company: 'ahmedyasinvm.site — Portfolio Project',
-    role: 'Full-Stack Developer (Architect & Owner)',
-    period: 'Jan 2026 – Present',
-    bullets: [
-      'Designed and built a WebGL + React portfolio featuring a real-time PBR city scene rendered in Three.js with a GSAP ScrollTrigger-driven cinematic camera flight path.',
-      'Engineered a Vite build pipeline with GitHub Actions CI/CD and automatic Cloudflare cache invalidation on every push to main.',
-      'Implemented Lenis smooth scrolling, Framer Motion entrance animations, and a custom post-processing Bloom pass via @react-three/postprocessing.',
-    ],
-  },
-  {
     company: 'Luminar Technolab',
     role: 'Python Django Full-Stack Developer Trainee',
     period: 'Jun 2025 – Dec 2025',
