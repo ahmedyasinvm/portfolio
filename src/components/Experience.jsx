@@ -60,6 +60,9 @@ export default function Experience() {
               animate={inView ? 'show' : 'hidden'}
               transition={{ delay: i * 0.15 }}
             >
+              {/* Index badge */}
+              <span className="exp-index">0{i + 1}</span>
+
               <div className="exp-header">
                 <h3 className="exp-company">{exp.company}</h3>
                 <span className="exp-badge">{exp.period}</span>

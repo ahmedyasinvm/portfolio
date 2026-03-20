@@ -19,6 +19,14 @@ const itemVariants = {
   },
 };
 
+const techStack = [
+  { label: 'Python', emoji: '🐍' },
+  { label: 'Django', emoji: '🟩' },
+  { label: 'React', emoji: '⚛️' },
+  { label: 'REST API', emoji: '🔗' },
+  { label: 'MySQL', emoji: '🗄️' },
+];
+
 export default function Hero({ visible }) {
   return (
     <section className="hero-section" id="home" style={{ position: 'relative' }}>
@@ -28,11 +36,12 @@ export default function Hero({ visible }) {
         <div className="orb orb-2" />
         <div className="orb orb-3" />
       </div>
+
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate={visible ? 'show' : 'hidden'}
-        style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+        className="hero-content"
       >
         <motion.div className="hero-eyebrow" variants={itemVariants}>
           Available for Full-Stack roles
@@ -48,19 +57,40 @@ export default function Hero({ visible }) {
           interactive frontends, and real-world solutions from Kerala, India.
         </motion.p>
 
+        {/* Tech Stack Pills */}
+        <motion.div className="hero-tech-row" variants={itemVariants}>
+          {techStack.map((tech) => (
+            <span key={tech.label} className="hero-tech-pill">
+              <span>{tech.emoji}</span>
+              {tech.label}
+            </span>
+          ))}
+        </motion.div>
+
         <motion.div className="hero-actions" variants={itemVariants}>
           <a href="/resume.pdf" download className="btn-primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '8px' }}><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '8px', flexShrink: 0 }}>
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
             Download Resume
           </a>
-          <a href="#projects" className="btn-ghost">View My Work</a>
+          <a href="#projects" className="btn-ghost">View My Work →</a>
         </motion.div>
       </motion.div>
 
-      <div className="scroll-indicator">
-        <span>Scroll</span>
-        <div className="scroll-line" />
-      </div>
+      {visible && (
+        <motion.div
+          className="scroll-indicator"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 0.8 }}
+        >
+          <span>Scroll</span>
+          <div className="scroll-line" />
+        </motion.div>
+      )}
     </section>
   );
 }

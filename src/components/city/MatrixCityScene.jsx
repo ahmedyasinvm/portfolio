@@ -33,7 +33,7 @@ function CinematicCamera() {
     // GSAP ScrollTrigger timeline to map scroll percentage directly to scrollProgress
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".matrix-scroll-container",
+        trigger: "body",
         start: "top top",
         end: "bottom bottom",
         scrub: 1,
@@ -104,13 +104,8 @@ function MatrixCity() {
 ──────────────────────────────────────────────────────────── */
 export default function MatrixCityScene() {
   return (
-    <div style={{ backgroundColor: '#000000', minHeight: '100vh', width: '100%', position: 'relative' }}>
-      {/* 
-        This is the fixed Canvas container. Pure black background. 
-        Zero standard lighting. 
-      */}
-      <div style={{ position: 'fixed', inset: 0, zIndex: 0 }}>
-        <Canvas
+    <div className="webgl-layer">
+      <Canvas
           shadows
           gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping }}
         >
@@ -162,13 +157,6 @@ export default function MatrixCityScene() {
             />
           </EffectComposer>
         </Canvas>
-      </div>
-
-      {/* 
-        This empty scroll container provides height to hijack for GSAP. 
-        The actual visual is in the fixed Canvas above.
-      */}
-      <div className="matrix-scroll-container" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '400vh', pointerEvents: 'none' }} />
     </div>
   );
 }

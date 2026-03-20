@@ -1,16 +1,15 @@
 import { useRef, useEffect } from 'react';
-import { motion, useInView, useMotionValue, animate } from 'framer-motion';
+import { motion, useInView, animate } from 'framer-motion';
 
 const stats = [
-  { value: 3, suffix: '+', label: 'Years of Coding' },
-  { value: 5, suffix: '+', label: 'Django Apps Shipped' },
-  { value: 12, suffix: '+', label: 'Tech Stack Components' },
-  { value: 15, suffix: '+', label: 'REST APIs Built' },
+  { value: 3, suffix: '+', label: 'Years of Coding', icon: '🗓️' },
+  { value: 5, suffix: '+', label: 'Django Apps Shipped', icon: '🚀' },
+  { value: 12, suffix: '+', label: 'Tech Stack Components', icon: '⚙️' },
+  { value: 15, suffix: '+', label: 'REST APIs Built', icon: '🔗' },
 ];
 
 function Counter({ value, suffix }) {
   const ref = useRef(null);
-  const motionValue = useMotionValue(0);
   const inView = useInView(ref, { once: true });
 
   useEffect(() => {
@@ -44,6 +43,8 @@ export default function Stats() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
+              <div className="stat-top-bar" />
+              <p className="stat-icon">{stat.icon}</p>
               <p className="stat-number">
                 <Counter value={stat.value} suffix={stat.suffix} />
               </p>
